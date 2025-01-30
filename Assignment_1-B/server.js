@@ -13,13 +13,6 @@ app.post('/api/register', (req, res) => {
     res.send('User registered successfully (POST)');
 });
 
-// GET endpoint
-app.get('/api/register', (req, res) => {
-    const { name, email, password } = req.query;
-    console.log('Received registration data (GET):', { name, email, password });
-    res.send('User registered successfully (GET)');
-});
-
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
