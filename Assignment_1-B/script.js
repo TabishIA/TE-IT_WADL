@@ -20,10 +20,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     // Send data via AJAX POST (recommended for sensitive data)
     sendDataWithPost(user);
-
-    // Alternatively, send data via AJAX GET (not recommended for sensitive data)
-    // sendDataWithGet(user);
-
+    
     // Show success message
     alert('User registered successfully! Check the console for AJAX logs.');
 });
@@ -39,19 +36,6 @@ function sendDataWithPost(user) {
         }
     };
     xhr.send(JSON.stringify(user));
-}
-
-// Function to send data using AJAX GET
-function sendDataWithGet(user) {
-    const xhr = new XMLHttpRequest();
-    const queryParams = `?name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}&password=${encodeURIComponent(user.password)}`;
-    xhr.open('GET', `http://localhost:3000/api/register${queryParams}`, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log('User registered successfully (GET):', xhr.responseText);
-        }
-    };
-    xhr.send();
 }
 
 // Add event listener for the "View Registered Users" button
