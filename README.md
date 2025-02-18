@@ -1,6 +1,5 @@
-# TE-IT_WADL
+# TE-IT_WADL Assignments  
 
-# Web Application Development (WAD) Assignments  
 📌 **SPPU Third Year IT (2019 Pattern)**  
 
 ## **Assignment List**  
